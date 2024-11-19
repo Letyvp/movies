@@ -3,7 +3,7 @@ async function main() {
     const movies = await fetch("https://www.omdbapi.com/?i=tt3896198&apikey=21391f58&s=movies");
     const movieData = await movies.json();
     const movieList = document.querySelector(".movie-list");
-    movieList.innerHTML = movieData.map((movies) => moviesHTML(movies)).join("");
+    movieList.innerHTML = movieData.map((movie) => moviesHTML(movie)).join("");
 }
 
 main();

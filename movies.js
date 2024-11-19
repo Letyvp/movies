@@ -1,18 +1,22 @@
 function renderMovies() {
-  const movieWrapper = document.querySelector('.movie__wrapper');
-
+  const moviesWrapper = document.querySelector('.movie__wrapper');
   const movies = getMovies();
-  console.log(movies)
-  movieWrapper.innerHTML = 
-  `<div class="movie__wrapper">
+   
+  const moviesHtml = movies.map((movie) => {
+  return `<div class="movie__wrapper">
             <div class="movie__data">
               <figure>
-              <img src="${poster.url}" class="movie__poster" alt=""></figure>
+              <img src="${movie.url}" class="movie__poster" alt=""></figure>
               <h3 class="movie__name">${movie.title}</h3>
               <p class="movie__year">${movie.year}</p>
             </div>
-          </div>`
+          </div>`;
+  }).join("");
+
+moviesWrapper.innerHTML = moviesHtml
+console.log(moviesHtml);
 }
+
 setTimeout(() => {
   renderMovies();
 });
