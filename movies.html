@@ -36,11 +36,15 @@
                     </ul>
             </div>
         </nav>
-        <section class="header__des">
+        <section class="header__des--two">
             <h1 class="title">Find your Movie</h1>
-            <div class="wrapper">
-                <input type="text" placeholder="Search title, genre, people"/>
-                <button class="btn click"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="drop">
+                <select id="filter">
+                    <option value="" disabled selected>Sort</option>
+                    <option value="recent__movies">Recent</option>
+                    <option value="older__movies">Older</option>
+                    <option value="series">Series</option>
+                </select>
             </div>
         </section>
         <section class="searching">
@@ -49,23 +53,50 @@
                 <div class="movie-list">
                     <div class="movie__wrapper">
                         <div class="movie__data">
-                            <img src="" alt="">
+                            <figure>
+                            <img src="" class="movie__poster" alt=""></figure>
                             <h3 class="movie__name"></h3>
-                            <p class="price">$$$</p>
+                            <p class="movie__year"></p>
                         </div>
                     </div>
                     <div class="movie__wrapper">
                         <div class="movie__data">
-                            <img src="" alt="">
+                            <figure>
+                            <img src="" class="movie__poster" alt=""></figure>
                             <h3 class="movie__name"></h3>
-                            <p class="price">$$$</p>
+                            <p class="movie__year"></p>
                         </div>
                     </div>
                     <div class="movie__wrapper">
                         <div class="movie__data">
-                            <img src="" alt="">
+                            <figure>
+                            <img src="" class="movie__poster" alt=""></figure>
                             <h3 class="movie__name"></h3>
-                            <p class="price">$$$</p>
+                            <p class="movie__year"></p>
+                        </div>
+                    </div>
+                    <div class="movie__wrapper">
+                        <div class="movie__data">
+                            <figure>
+                            <img src="" class="movie__poster" alt=""></figure>
+                            <h3 class="movie__name"></h3>
+                            <p class="movie__year"></p>
+                        </div>
+                    </div>
+                    <div class="movie__wrapper">
+                        <div class="movie__data">
+                            <figure>
+                            <img src="" class="movie__poster" alt=""></figure>
+                            <h3 class="movie__name"></h3>
+                            <p class="movie__year"></p>
+                        </div>
+                    </div>
+                    <div class="movie__wrapper">
+                        <div class="movie__data">
+                            <figure>
+                            <img src="" class="movie__poster" alt=""></figure>
+                            <h3 class="movie__name"></h3>
+                            <p class="movie__year"></p>
                         </div>
                     </div>
                 </div>
