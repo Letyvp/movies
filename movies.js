@@ -1,23 +1,28 @@
 function renderMovies() {
   const moviesWrapper = document.querySelector('.movie__wrapper');
   const movies = getMovies();
-   
-  const moviesHtml = movies.map((movie) => {
-  return `<div class="movie__wrapper">
-            <div class="movie__data">
-              <figure>
-              <img src="${movie.url}" class="movie__poster" alt=""></figure>
-              <h3 class="movie__name">${movie.title}</h3>
-              <p class="movie__year">${movie.year}</p>
-            </div>
-          </div>`;
-  }).join("");
+  const contebt = document.querySelector(".content");
 
-moviesWrapper.innerHTML = moviesHtml
-console.log(moviesHtml);
+  content.style.display = "flex";
+   
+  const moviesHtml = movies
+  .map((movie) => {
+    return `<div class="movie">
+              <div class="movie__data">
+                <figure>
+                <img src="${movie.Poster}" class="movie__poster" alt="${movie.Title}"></figure>
+                <h3 class="movie__name">${movie.Title}</h3>
+                <p class="movie__year">${movie.Year}</p>
+              </div>
+            </div>`;
+    })
+    .join("");
+
+moviesWrapper.innerHTML = moviesHtml;
+
 }
 
-setTimeout(() => {
+document.addEventListener("DOMContentLoaded", () => {
   renderMovies();
 });
 
@@ -93,8 +98,6 @@ function getMovies() {
       "imdbID": "tt10468676",
       "Type": "series",
       "Poster": "https://m.media-amazon.com/images/M/MV5BMGMzZjdiNjEtMTMwMS00MTVkLTk0NWMtOGFjODY1MWRkNmVmXkEyXkFqcGc@._V1_SX300.jpg"
-    }
-  ],
-  "totalResults"; "999",
-  "Response"; "True"
+    },
+  ];
 }
