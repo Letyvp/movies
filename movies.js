@@ -13,6 +13,9 @@ function showMovieList(movie) {
   window.location.href = `${window.location.origin}/movie.html`;
 }
 
+function OnsearchChange(event) {
+  const movie = event.target.value;
+}
 
 function renderMovies() {
   const moviesWrapper = document.querySelector('.movie__wrapper');
