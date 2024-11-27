@@ -108,7 +108,7 @@ nav {
     margin: 0 12px;
 }
 
-.nav__link--primary {
+.nav__link--next {
     margin: 0 12px;
 }
 
@@ -222,7 +222,6 @@ select {
 
 .movie__list {
     margin-top: 16px;
-    
 }
 
 .drop {
@@ -235,21 +234,31 @@ select {
 .movie__wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .poster {
     width: 300px;
     height: 270px;
+    cursor: pointer;
+    transform: scale(.9);
+}
+
+.poster:hover {
+    transform: scale(1.05);
 }
 
 .movie {
     margin-top: 16px; 
-    width: 50%;
+    width: 100%;
+    max-width: 400px;
 }
 
 .movie__name,
 .movie__year {
     width: 45%;
+    cursor: pointer;
 }
 
 /* small phones, tablets, large smartphones */
@@ -299,13 +308,14 @@ select {
 /* small phones */
 
 @media (max-width: 480px) {
-    .nav__link--primary {
+    .nav__link--next {
         display: block;
     }
 
     .nav__link{
         display: none;
     }
+
 
     .header {
         width: 45%;
